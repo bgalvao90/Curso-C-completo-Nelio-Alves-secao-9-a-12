@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Aula115.Entities
 
         public virtual string priceTag()
         {
-            return Name + " - $ " + Price;
+            return Name + " - $ " + Price.ToString(CultureInfo.InvariantCulture);
         }
     }
 }

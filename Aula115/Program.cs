@@ -29,8 +29,8 @@ for  (int i = 1; i <= productCount; i++)
     }
     else if (productCUI == 'u')
     {
-        Console.Write("Manufacture Date (DD/MM/YYYY)");
-        DateTime productManDate = DateTime.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        Console.Write("Manufacture Date (DD/MM/YYYY): ");
+        DateTime productManDate = DateTime.Parse(Console.ReadLine());
         list.Add(new UsedProduct(productName, productPrice, productManDate));   
     }
     else
@@ -38,8 +38,11 @@ for  (int i = 1; i <= productCount; i++)
         list.Add(new Product(productName, productPrice));
     }
 
-    foreach (Product product in list)
-    {
-        Console.WriteLine($"{product.Name} $ {product.Price}");
-    }
+  
+}
+
+Console.WriteLine("PRICE TAGS: ");
+foreach (Product product in list)
+{
+    Console.WriteLine($"{product.priceTag()}");
 }
