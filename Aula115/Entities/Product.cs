@@ -22,7 +22,7 @@ namespace Aula115.Entities
 
         public virtual string priceTag()
         {
-            return Name + " - $ " + Price.ToString(CultureInfo.InvariantCulture);
+            return Name + " $ " + Price.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
